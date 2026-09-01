@@ -1,0 +1,99 @@
+* {
+    background:       #070405f2;
+    surface:          #1d0b10f2;
+    raised:           #2b0e15ff;
+    border:           #64101dff;
+    accent:           #b11226ff;
+    focus:            #ff3347ff;
+    text:             #d78388ff;
+    text-muted:       #9e8587ff;
+    text-bright:      #eadfcfff;
+    transparent:      #00000000;
+}
+
+window {
+    width: 620px;
+    border: 2px;
+    border-color: @focus;
+    border-radius: 12px;
+    background-color: @background;
+    padding: 10px;
+}
+
+mainbox {
+    background-color: @transparent;
+    spacing: 9px;
+}
+
+inputbar {
+    background-color: @surface;
+    border: 1px;
+    border-color: @border;
+    border-radius: 8px;
+    padding: 10px 12px;
+    spacing: 10px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: @transparent;
+    text-color: @focus;
+    font: "JetBrainsMono Nerd Font Bold 10";
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @text-bright;
+    placeholder: "type to filter…";
+    placeholder-color: @text-muted;
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    fixed-height: false;
+    scrollbar: false;
+    spacing: 4px;
+    background-color: @transparent;
+}
+
+element {
+    padding: 9px 11px;
+    spacing: 11px;
+    border: 1px;
+    border-color: @transparent;
+    border-radius: 6px;
+    background-color: @transparent;
+    text-color: @text;
+}
+
+element normal active,
+element alternate active {
+    text-color: @focus;
+}
+
+element selected normal,
+element selected active {
+    background-color: @raised;
+    border-color: @focus;
+    text-color: @text-bright;
+}
+
+element-icon {
+    size: 26px;
+    background-color: @transparent;
+}
+
+element-text {
+    background-color: @transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+message,
+textbox {
+    background-color: @surface;
+    text-color: @text;
+    border-radius: 6px;
+    padding: 8px;
+}

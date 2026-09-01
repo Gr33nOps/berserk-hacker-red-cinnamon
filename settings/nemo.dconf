@@ -1,0 +1,21 @@
+[desktop]
+computer-icon-visible=false
+font='JetBrains Mono Nerd Font 10'
+home-icon-visible=false
+ignored-desktop-handlers=['conky', 'csd-background', 'hidamari']
+network-icon-visible=false
+show-desktop-icons=true
+show-orphaned-desktop-icons=true
+trash-icon-visible=false
+use-desktop-grid=true
+volumes-visible=false
+
+[preferences]
+always-use-browser=true
+click-policy='double'
+confirm-trash=true
+default-folder-viewer='icon-view'
+enable-delete=true
+show-hidden-files=false
+sort-directories-first=true
+sort-favorites-first=true

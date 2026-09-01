@@ -1,0 +1,12 @@
+[Unit]
+Description=Periodically reconcile the Hacker Red application icon overlay
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+RandomizedDelaySec=2min
+Persistent=true
+Unit=red-icon-overlay.service
+
+[Install]
+WantedBy=timers.target

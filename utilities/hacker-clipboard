@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+current=$(xclip -selection clipboard -out 2>/dev/null || true)
+edited=$(printf '%s' "$current" | rofi -dmenu -p 'CLIPBOARD' \
+    -theme "$HOME/.config/rofi/hacker-red.rasi") || exit 0
+printf '%s' "$edited" | xclip -selection clipboard -in
+command -v notify-send >/dev/null 2>&1 && notify-send 'Clipboard updated' "$edited"

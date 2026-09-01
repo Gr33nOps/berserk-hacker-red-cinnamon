@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Plank
+Comment=Hacker Red dock
+Exec=plank
+OnlyShowIn=X-Cinnamon;
+X-GNOME-Autostart-enabled=true
+NoDisplay=false

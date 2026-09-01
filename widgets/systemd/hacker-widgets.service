@@ -1,0 +1,14 @@
+[Unit]
+Description=Red desktop widgets
+After=default.target
+ConditionPathExists=%h/.local/lib/berserk-hacker-red-cinnamon/widgets/widgets-start.sh
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/lib/berserk-hacker-red-cinnamon/widgets/widgets-start.sh
+RemainAfterExit=yes
+# The launcher exits after starting the widgets; do not terminate the panels.
+KillMode=process
+
+[Install]
+WantedBy=default.target

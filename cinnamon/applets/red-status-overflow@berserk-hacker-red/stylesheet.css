@@ -1,0 +1,14 @@
+.red-status-overflow-heading {
+  color: #ff3347;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.red-status-overflow-item {
+  spacing: 10px;
+}
+
+.red-status-overflow-empty {
+  color: #9e8587;
+  font-style: italic;
+}

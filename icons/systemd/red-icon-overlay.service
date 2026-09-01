@@ -1,0 +1,10 @@
+[Unit]
+Description=Generate red icon-theme overrides for installed applications
+ConditionPathExists=%h/.local/bin/hacker-red-icon-overlay
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/hacker-red-icon-overlay
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=5min

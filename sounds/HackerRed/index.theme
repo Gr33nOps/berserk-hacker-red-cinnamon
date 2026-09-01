@@ -1,0 +1,8 @@
+[Sound Theme]
+Name=Hacker Red
+Comment=Subtle system sounds for the Hacker Red Cinnamon rice
+Inherits=LinuxMint,freedesktop
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo

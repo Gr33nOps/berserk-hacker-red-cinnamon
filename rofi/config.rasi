@@ -1,0 +1,16 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Hacker-Red-Universal";
+    drun-display-format: "{name}";
+    display-drun: "APPS";
+    display-run: "RUN";
+    display-window: "WINDOWS";
+    matching: "fuzzy";
+    sorting-method: "fzf";
+    sort: true;
+    terminal: "ghostty";
+    font: "JetBrainsMono Nerd Font 11";
+    hover-select: false;
+    click-to-exit: true;
+}

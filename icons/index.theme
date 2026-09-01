@@ -1,0 +1,35 @@
+[Icon Theme]
+Name=Hacker Red Universal
+Comment=Automatically maintained crimson application icon overlay
+Inherits=Tela-circle-red-dark,Tela-circle-red,Red-Adwaita,Red-ePapirus,hicolor
+Directories=apps/256x256,categories/256x256,places/256x256,actions/256x256,devices/256x256,mimetypes/256x256
+
+[apps/256x256]
+Size=256
+Context=Applications
+Type=Fixed
+
+[categories/256x256]
+Size=256
+Context=Categories
+Type=Fixed
+
+[places/256x256]
+Size=256
+Context=Places
+Type=Fixed
+
+[actions/256x256]
+Size=256
+Context=Actions
+Type=Fixed
+
+[devices/256x256]
+Size=256
+Context=Devices
+Type=Fixed
+
+[mimetypes/256x256]
+Size=256
+Context=MimeTypes
+Type=Fixed

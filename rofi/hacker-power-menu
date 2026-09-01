@@ -1,0 +1,27 @@
+#!/bin/sh
+set -eu
+
+theme="$HOME/.config/rofi/hacker-red.rasi"
+lock="  Lock"
+logout="󰍃  Log out"
+suspend="󰒲  Suspend"
+reboot="󰜉  Restart"
+poweroff="  Shut down"
+
+choice=$(printf '%s\n' "$lock" "$logout" "$suspend" "$reboot" "$poweroff" |
+    rofi -dmenu -i -p POWER -theme "$theme") || exit 0
+
+case "$choice" in
+    "$lock") loginctl lock-session; exit 0 ;;
+esac
+
+confirm=$(printf '%s\n' "No" "Yes" |
+    rofi -dmenu -p "Confirm ${choice#*  }?" -selected-row 0 -theme "$theme") || exit 0
+[ "$confirm" = "Yes" ] || exit 0
+
+case "$choice" in
+    "$logout") cinnamon-session-quit --logout --no-prompt ;;
+    "$suspend") systemctl suspend ;;
+    "$reboot") systemctl reboot ;;
+    "$poweroff") systemctl poweroff ;;
+esac

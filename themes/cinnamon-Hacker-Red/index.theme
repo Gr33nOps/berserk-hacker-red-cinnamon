@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=cinnamon-Hacker-Red
+Comment=A high-end theme based on "The Rule" of pure black and neon red. No impurities.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+X-GNOME-Metatheme-Supported=true
+GtkTheme=cinnamon-Hacker-Red
+MetacityTheme=cinnamon-Hacker-Red
+IconTheme=Hacker-Red-Universal
+Inherits=Mint-Y,hicolor
+GtkVersion=3.0

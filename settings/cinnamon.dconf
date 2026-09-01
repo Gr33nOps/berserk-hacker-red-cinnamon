@@ -1,0 +1,68 @@
+[/]
+alttab-minimized-aware=true
+alttab-switcher-delay=100
+alttab-switcher-show-all-workspaces=false
+alttab-switcher-style='icons+thumbnails'
+desktop-effects=true
+desktop-effects-change-size=true
+desktop-effects-close='traditional'
+desktop-effects-map='traditional'
+desktop-effects-minimize='traditional'
+desktop-effects-workspace=true
+enabled-applets=['panel1:left:0:Cinnamenu@json:3', 'panel1:right:0:red-status-overflow@berserk-hacker-red:8', 'panel1:right:1:systray@cinnamon.org:1', 'panel1:right:0:notifications@cinnamon.org:3', 'panel1:right:3:network@cinnamon.org:4', 'panel1:right:4:sound@cinnamon.org:5', 'panel1:right:5:power@cinnamon.org:6', 'panel1:right:6:calendar@cinnamon.org:7']
+enabled-desklets=@as []
+hotcorner-layout=['expo:false:0', 'scale:false:0', 'scale:false:0', 'desktop:false:0']
+panel-scale-text-icons=true
+panel-zone-symbolic-icon-sizes='[{"left":20,"center":20,"right":20,"panelId":1}]'
+panels-autohide=['1:false']
+panels-enabled=['1:0:top']
+panels-height=['1:36']
+startup-animation=true
+workspace-expo-view-as-grid=true
+workspace-osd-visible=true
+
+[desktop/interface]
+font-name='Inter 10'
+gtk-theme='cinnamon-Hacker-Red'
+text-scaling-factor=1.0
+
+[desktop/keybindings/wm]
+switch-input-source=['XF86Keyboard']
+switch-input-source-backward=['<Shift>XF86Keyboard']
+
+[desktop/notifications]
+bottom-notifications=false
+display-notifications=true
+fade-on-mouseover=true
+fade-opacity=40
+fullscreen-notifications=false
+notification-duration=4
+notification-screen-display='primary-screen'
+
+[desktop/screensaver]
+allow-media-control=true
+floating-widgets=true
+font-date='JetBrains Mono Nerd Font 12'
+font-message='JetBrains Mono Nerd Font 11'
+font-time='JetBrains Mono Nerd Font 38'
+lock-enabled=true
+show-album-art=true
+show-clock=true
+show-info-panel=true
+show-notifications=false
+time-format='%H:%M'
+
+[desktop/sound]
+event-sounds=false
+input-feedback-sounds=false
+theme-name='HackerRed'
+volume-sound-enabled=true
+
+[desktop/wm/preferences]
+button-layout=':minimize,maximize,close'
+theme='Orchis-Red-Dark'
+titlebar-font='Inter SemiBold 10'
+titlebar-uses-system-font=false
+
+[theme]
+name='cinnamon-Hacker-Red'

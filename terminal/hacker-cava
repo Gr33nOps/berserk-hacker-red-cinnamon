@@ -1,0 +1,2 @@
+#!/bin/sh
+exec ghostty --title="Hacker Red Visualizer" -e cava -p "$HOME/.config/cava/config"

@@ -1,0 +1,104 @@
+# Berserk Hacker Red — a restrained crimson frame instead of a heavy block.
+
+format = """
+[╭─](bold deep_red)$os$username$hostname[ in ](dim ivory)$directory$git_branch$git_status$cmd_duration$status$jobs
+[╰─](bold deep_red)$character"""
+
+right_format = "$time"
+add_newline = false
+palette = "berserk_red"
+command_timeout = 800
+
+[palettes.berserk_red]
+crimson = "#ff3347"
+deep_red = "#b11226"
+wine = "#64101d"
+rose = "#d78388"
+ivory = "#eadfcf"
+muted = "#8f7779"
+
+[os]
+disabled = false
+style = "bold crimson"
+format = "[$symbol]($style)"
+
+[os.symbols]
+Linux = "󰌽 "
+Mint = "󰣭 "
+Ubuntu = "󰕈 "
+
+[username]
+show_always = false
+style_user = "bold ivory"
+style_root = "bold crimson"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = true
+style = "bold rose"
+format = "[@$hostname]($style)"
+
+[directory]
+style = "bold crimson"
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = " 󰌾"
+read_only_style = "rose"
+truncation_length = 4
+truncation_symbol = "…/"
+home_symbol = "~"
+
+[directory.substitutions]
+Documents = "󰈙 Documents"
+Downloads = " Downloads"
+Pictures = " Pictures"
+Music = " Music"
+
+[git_branch]
+symbol = " "
+style = "bold rose"
+format = "[on](dim ivory) [$symbol$branch(:$remote_branch)]($style) "
+truncation_length = 28
+
+[git_status]
+style = "crimson"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "~${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?${count}"
+stashed = "*${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "×${count}"
+
+[cmd_duration]
+min_time = 1500
+style = "dim rose"
+format = "[took $duration]($style) "
+show_milliseconds = false
+
+[status]
+disabled = false
+style = "bold crimson"
+format = "[$symbol$status]($style) "
+symbol = "✘ "
+success_symbol = ""
+map_symbol = true
+
+[jobs]
+style = "bold rose"
+symbol = "󰜎 "
+format = "[$symbol$number]($style) "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "dim muted"
+format = "[$time]($style)"
+
+[character]
+success_symbol = "[❯](bold ivory)"
+error_symbol = "[❯](bold crimson)"
+vimcmd_symbol = "[❮](bold rose)"

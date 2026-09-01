@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+shell=${SHELL:-/bin/bash}
+config_home=${XDG_CONFIG_HOME:-$HOME/.config}
+
+if [[ ${shell##*/} == bash ]]; then
+    exec "$shell" --rcfile "$config_home/berserk-hacker-red-cinnamon/terminal.bashrc" -i
+fi
+
+# Preserve non-Bash login shells while still showing the themed summary.
+if command -v neofetch >/dev/null 2>&1; then
+    neofetch \
+        --config "$config_home/neofetch/berserk-red.conf" \
+        --source "$config_home/neofetch/berserk-logo.txt"
+fi
+exec "$shell" -l

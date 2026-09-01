@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+pictures=$(xdg-user-dir PICTURES 2>/dev/null || printf '%s/Pictures' "$HOME")
+directory="$pictures/Screenshots"
+file="$directory/berserk-$(date +%Y%m%d-%H%M%S).png"
+mkdir -p "$directory"
+
+if gnome-screenshot -a -f "$file" && [ -s "$file" ]; then
+    xclip -selection clipboard -target image/png -in < "$file" 2>/dev/null || true
+    command -v notify-send >/dev/null 2>&1 && \
+        notify-send -i "$file" 'Screenshot saved' "$file"
+fi

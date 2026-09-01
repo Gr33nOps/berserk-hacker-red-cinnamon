@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+
+color=$(zenity --color-selection --show-palette --title='Berserk color picker') || exit 0
+printf '%s' "$color" | xclip -selection clipboard -in
+command -v notify-send >/dev/null 2>&1 && notify-send 'Color copied' "$color"

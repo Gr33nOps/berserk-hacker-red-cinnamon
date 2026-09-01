@@ -1,0 +1,73 @@
+conky.config = {
+  alignment = 'top_right',
+  -- Stay in the foreground so the user service can restart Conky after an
+  -- X11/Cinnamon theme refresh closes it unexpectedly.
+  background = false,
+  update_interval = 2,
+  cpu_avg_samples = 2,
+  net_avg_samples = 2,
+
+  double_buffer = true,
+  draw_borders = false,
+  draw_outline = false,
+  draw_shades = false,
+  font = 'JetBrainsMono Nerd Font Mono:size=9',
+  -- The launcher positions this panel dynamically below Cinnamon's panel.
+  gap_x = 24,
+  gap_y = 48,
+  minimum_width = 320,
+  maximum_width = 320,
+  no_buffers = true,
+  out_to_console = false,
+
+  own_window = true,
+  own_window_argb_visual = true,
+  own_window_argb_value = 185,
+  own_window_class = 'Conky',
+  own_window_title = 'conky system',
+  -- The launcher places this normal window precisely on the desktop layer.
+  own_window_type = 'normal',
+  own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager',
+
+  use_xft = true,
+  xinerama_head = 0,
+
+  default_color = '#fff4e8',
+  color0 = '#070405',
+  color1 = '#ff3347',
+  color2 = '#b11226',
+  color3 = '#fff4e8',
+  color4 = '#2b0e15',
+  color5 = '#eadfcf',
+  color6 = '#9e8587',
+  color7 = '#b11226',
+}
+
+conky.text = [[
+${font JetBrainsMono Nerd Font Mono:size=28}${alignc}${color1}${time %H:%M}${color}${font}
+${color3}${alignc}${time %A %d %B %Y}${color}
+${alignc}${color2}──────────────────────────────${color}
+${color2}▌CORE${color} ${color3}${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}%${color}
+${color2}▌TEMP${color} ${color3}${execi 10 $HOME/.local/lib/berserk-hacker-red-cinnamon/widgets/scripts/system-info.sh temp}${color}${alignr}${color2}LOAD${color} ${color3}${loadavg 1}${color}
+${color2}▌CPU ${color}${cpugraph 16,226 2b0e15 ff3347}${alignr}${color2}▐${color}
+${color2}▌RAM ${color}${color3}${mem} / ${memmax}${color}${alignr}${color2}BUF ${color}${color3}${buffers}${color}
+${color2}▌MEM ${color}${memgraph 14,226 2b0e15 ff3347}${alignr}${color2}▐${color}
+${color2}▌SWAP${color} ${color3}${swap} / ${swapmax}${color}
+${color2}▌DISK${color} ${color3}${fs_used /} / ${fs_size /}${color}${alignr}${color3}${fs_free_perc /}% free${color}
+${color2}▌BAR ${color}${color7}${fs_bar 8,226 /}${color2}▐${color}
+${color2}▌NET ${color}${color3}__NET_IFACE__${color}
+${color2}▌DWN ${color}${downspeedgraph __NET_IFACE__ 12,108 2b0e15 ff3347}${color2} ${upspeedgraph __NET_IFACE__ 12,108 2b0e15 ff3347}${color2}▐${color}
+${color3}▼ ${downspeedf __NET_IFACE__} ${color2}▲ ${color3}${upspeedf __NET_IFACE__}${color}${alignr}${color3}${totaldown __NET_IFACE__} / ${totalup __NET_IFACE__}${color}
+${alignc}${color2}──────────────────────────────${color}
+${color2}▌BAT ${color}${color3}${execi 10 $HOME/.local/lib/berserk-hacker-red-cinnamon/widgets/scripts/system-info.sh battery-label}${color}
+${color7}${execibar 10 8,308 $HOME/.local/lib/berserk-hacker-red-cinnamon/widgets/scripts/system-info.sh battery-percent}${color2}▐${color}
+${color2}▌SYS ${color}${color3}up ${uptime}${color}${alignr}${color2}PROC${color} ${color3}${processes} run${color}
+${color2}▌KERNEL${color} ${color3}${kernel}${color}${alignr}${color2}${nodename}${color}
+${color2}▌TOP ${color}${color3}${top name 1}${alignr}${top cpu 1}%${color}
+${color2}    ${color3}${top name 2}${alignr}${top cpu 2}%${color}
+${color2}MEM ${color}${color3}${top mem 1}${alignr}${top mem 1}%${color}
+${color2}▌WX ${color}${color3}${execpi 1800 $HOME/.local/lib/berserk-hacker-red-cinnamon/widgets/scripts/weather.sh}${color}
+${alignc}${color2}──────────────────────────────${color}
+${color1}${time %H:%M}${color3}${alignr}${time %a %d %b}${color}
+${color2}${loadavg 1} ${loadavg 2} ${loadavg 3} · ${kernel}${color}
+]]

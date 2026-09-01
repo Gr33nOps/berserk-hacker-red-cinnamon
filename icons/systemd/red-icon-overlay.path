@@ -1,0 +1,18 @@
+[Unit]
+Description=Watch application launchers for red icon-theme updates
+StartLimitIntervalSec=60s
+StartLimitBurst=4
+
+[Path]
+PathChanged=/usr/share/applications
+PathChanged=/usr/local/share/applications
+PathChanged=%h/.local/share/applications
+PathChanged=/var/lib/flatpak/exports/share/applications
+PathChanged=%h/.local/share/flatpak/exports/share/applications
+PathChanged=/var/lib/flatpak/app
+PathChanged=%h/.local/share/flatpak/app
+PathChanged=/var/lib/snapd/desktop/applications
+Unit=red-icon-overlay.service
+
+[Install]
+WantedBy=default.target
